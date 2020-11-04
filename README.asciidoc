@@ -1,0 +1,84 @@
+= Contributing
+
+*Want to contribute? Great!*
+We try to make it easy, and all contributions, even the smaller ones, are greatly welcome.
+This includes bug reports, fixes, documentation.
+
+All SmallRye projects use GitHub Issues to manage issues.
+Open an issue directly in GitHub within the appropriate SmallRye project repository.
+
+== Becoming a Project Committer
+
+Through continued contributions to SmallRye projects,
+other committers on the project can nominate you to become a committer too!
+
+Check out the link:Committer-Nomination-process[nomination process] for full details.
+
+== Legal
+
+All original contributions to SmallRye projects are licensed under the
+https://www.apache.org/licenses/LICENSE-2.0[ASL - Apache License],
+version 2.0 or later, or,
+if another license is specified as governing the file or directory being modified, such other license.
+
+All contributions are subject to the https://developercertificate.org/[Developer Certificate of Origin (DCO)].
+The DCO text is also included verbatim in the _dco.txt_ file in the root directory of each repository.
+
+== Before you Contribute
+
+To contribute, use GitHub Pull Requests, from your *own* fork.
+
+=== Code Reviews
+
+All submissions, including submissions by project members, need to be reviewed before they are merged.
+
+=== Continuous Integration
+
+We're all human, so SmallRye projects use continuous integration to ensure consistency,
+particularly as most SmallRye projects need to pass the applicable MicroProfile TCK for that specification.
+Each pull request triggers a full build of the project.
+Please make sure to monitor the output of the build and act accordingly.
+
+=== Tests and Documentation are not optional
+
+Don't forget to include tests in your pull requests.
+Also, don't forget the documentation (Javadoc).
+
+== Setup
+
+If you have not done so on your machine, you need to:
+
+- Install Git and configure your GitHub access
+- Install Java SDK (OpenJDK recommended)
+- Install Maven
+
+=== IDE Config and Code Style
+
+SmallRye projects have a strictly enforced code style.
+Code formatting is done by the Eclipse code formatter,
+using the config files found in https://github.com/smallrye/smallrye-code-rules/tree/master/src/main/resources/io/smallrye/coderules[Code Rules].
+By default when you run `mvn install` the code will be formatted automatically.
+When submitting a pull request the CI build will fail if running the formatter results in any code changes,
+so it is recommended that you always run a full Maven build before submitting a pull request.
+
+==== Eclipse Setup
+
+Open the *Preferences* window, and then navigate to _Java_ -> _Code Style_ -> _Formatter_.
+Click _Import_ and then select the `eclipse-format.xml` file in the `coderules` directory.
+
+Next navigate to _Java_ -> _Code Style_ -> _Organize Imports_.
+Click _Import_ and select the `eclipse.importorder` file.
+
+==== IDEA Setup
+
+Open the _Preferences_ window, navigate to _Plugins_ and install the [Eclipse Code Formatter Plugin](https://plugins.jetbrains.com/plugin/6546-eclipse-code-formatter).
+
+Restart your IDE, open the *Preferences* window again and navigate to _Other Settings_ -> _Eclipse Code Formatter_.
+
+Select _Use the Eclipse Code Formatter_,
+then change the _Eclipse Java Formatter Config File_ to point to the `eclipse-format.xml` file in the `coderules` directory.
+Make sure the _Optimize Imports_ box is ticked, and select the `eclipse.importorder` file as the import order config file.
+
+== The small print
+
+This project is an open source project, please act responsibly, be nice, polite, and enjoy!
