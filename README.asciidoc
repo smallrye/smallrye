@@ -79,6 +79,10 @@ Select _Use the Eclipse Code Formatter_,
 then change the _Eclipse Java Formatter Config File_ to point to the `eclipse-format.xml` file in the `coderules` directory.
 Make sure the _Optimize Imports_ box is ticked, and select the `eclipse.importorder` file as the import order config file.
 
+=== Signing Commits
+
+Signing commits is required to make sure that the contributor matches the author. To be able to sign commits, use the following instructions: https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
+
 == The small print
 
 This project is an open source project, please act responsibly, be nice, polite, and enjoy!
